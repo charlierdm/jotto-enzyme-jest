@@ -18,7 +18,7 @@ const Congrats = ({ success }) => {
 }
 
 Congrats.propTypes = {
-  success: propTypes.bool
+  success: propTypes.bool.isRequired
 }
 
 export default Congrats
