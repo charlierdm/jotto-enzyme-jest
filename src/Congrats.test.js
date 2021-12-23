@@ -3,12 +3,15 @@ import { shallow } from 'enzyme'
 import { findByTestAttr, checkProps } from '../test/testutils'
 import Congrats from './Congrats'
 
+const defaultProps = { success: false }
+
 const setup = (props={}) => {
-  return shallow(<Congrats {...props} />)
+  const setupProps = { ...defaultProps, ...props }
+  return shallow(<Congrats {...setupProps} />)
 } 
 
 test('renders without error', () => {
-  const wrapper = setup({ success: false })
+  const wrapper = setup()
   const component = findByTestAttr(wrapper, 'component-congrats')
   expect(component.length).toEqual(1)
 })
