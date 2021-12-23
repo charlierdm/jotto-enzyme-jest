@@ -2732,6 +2732,11 @@ char-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-2.0.0.tgz#16f98f3f874edceddd300fda5d58df380a7641a6"
   integrity sha512-oGu2QekBMXgyQNWPDRQ001bjvDnZe4/zBTz37TMbiKz1NbNiyiH5hRkobe7npRN6GfbGbxMYFck/vQ1r9c1VMA==
 
+check-prop-types@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/check-prop-types/-/check-prop-types-1.1.2.tgz#c42df4fbdb509fbd4d8a102d113bb0ca01c21e67"
+  integrity sha512-hGDrZ1yhRgKuP1yzZ5sUX/PPmlKBLOF1GyF0Z008Sienko3BFZmlCXnmq+npRTIL/WlFCUzThyd+F5PQnnT1ug==
+
 check-types@^11.1.1:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.1.2.tgz#86a7c12bf5539f6324eb0e70ca8896c0e38f3e2f"
@@ -6978,7 +6983,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.0, prop-types@^15.7.2:
+prop-types@^15.7.0, prop-types@^15.7.2, prop-types@^15.8.0:
   version "15.8.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.0.tgz#d237e624c45a9846e469f5f31117f970017ff588"
   integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
