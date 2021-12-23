@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Congrats({ success }) {
+const Congrats = ({ success }) => {
     if (success) {
       return (
         <div data-test='component-congrats'>
@@ -15,3 +15,5 @@ export default function Congrats({ success }) {
       )
     }
 }
+
+export default Congrats
