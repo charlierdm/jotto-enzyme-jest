@@ -24,7 +24,7 @@ const GuessedWord = (props) => {
             <tr><th>Guess</th><th>Matching Letters</th></tr>
           </thead>
           <tbody>
-            { guessedWordsRows}
+            {guessedWordsRows}
           </tbody>
         </table>
       </div>
