@@ -14,7 +14,7 @@ const Input = ({ secretWord }) => {
           value={currentGuess}
           onChange={(e) => setCurrentGuess(e.target.value)}
         />
-        <button data-test='submit-button' type="submit" >Submit</button>
+        <button data-test='submit-button' type="submit" onClick={setCurrentGuess('')}>Submit</button>
       </form>
     </div>
   )

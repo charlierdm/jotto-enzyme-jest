@@ -26,12 +26,24 @@ test('it does not give a warning when passed the correct props', () => {
 })
 
 describe('state controlled input field', () => {
-  test('state updates with value of the input box upon change', () => {
-    const wrapper = setup()
-    const inputBox = findByTestAttr(wrapper, 'input-box')
-    const mockEvent = { target: { value: 'train' }}
-    inputBox.simulate('change', mockEvent)
+  let wrapper
+  let inputBox
+  let mockEvent
 
+  beforeEach(() => {
+    wrapper = setup()
+    inputBox = findByTestAttr(wrapper, 'input-box')
+    mockEvent = { target: { value: 'train' }}
+    inputBox.simulate('change', mockEvent)
+  })
+
+  test('state updates with value of the input box upon change', () => {  
     expect(mockSetCurrentGuess).toHaveBeenCalledWith('train')
+  })
+
+  test('the input box is cleared upon clicking the submit button', () => {
+    const submitButton = findByTestAttr(wrapper, 'submit-button')
+    submitButton.simulate('click')
+    expect(mockSetCurrentGuess).toHaveBeenCalledWith('')
   })
 })
