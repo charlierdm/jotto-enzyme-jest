@@ -2,6 +2,7 @@ import react from "react";
 import { checkProps, findByTestAttr } from "../test/testUtils";
 import { shallow } from 'enzyme'
 import Input from './Input'
+import React from "react";
 
 const setup = (secretWord='party') => {
   return shallow(<Input secretWord={secretWord} />)
@@ -15,4 +16,18 @@ test('renders without error', () => {
 
 test('it does not give a warning when passed the correct props', () => {
   checkProps(Input, { secretWord: 'party' })
+})
+
+describe('state controlled input field', () => {
+  test('state updates with value of the input box upon change', () => {
+    const mockSetCurrentGuess = jest.fn()
+    React.useState = jest.fn(() => [ '', mockSetCurrentGuess ])
+
+    const wrapper = setup()
+    const inputBox = findByTestAttr(wrapper, 'input-box')
+    const mockEvent = { target: { value: 'train' }}
+    inputBox.simulate('change', mockEvent)
+
+    expect(mockSetCurrentGuess).toHaveBeenCalledWith('train')
+  })
 })
