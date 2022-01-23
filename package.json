@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.25.0",
     "check-prop-types": "^1.1.2",
     "enzyme": "^3.11.0",
     "jest": "^27.4.5",
@@ -40,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6"
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "moxios": "^0.4.0"
   }
 }
