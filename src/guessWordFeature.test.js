@@ -69,4 +69,11 @@ describe('guess the secret word', () => {
     const congrats = findByTestAttr(wrapper, 'component-congrats')
     expect(congrats.text().length).toBeGreaterThan(0)
   })
+  test('does not display input component', () => {
+    const inputBox = findByTestAttr(wrapper, 'input-box')
+    expect(inputBox.exists()).toBe(false)
+
+    const submitButton = findByTestAttr(wrapper, 'submit-button')
+    expect(submitButton.exists()).toBe(false)
+  })
 })
