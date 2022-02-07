@@ -17,9 +17,13 @@ describe('getSecretWord', () => {
         response: 'party'
       })
     })
+    // update to test app in Redux / Context sections
+
+    // return function call so that promise resolves before the test has finished running
     return getSecretWord()
       .then((secretWord) => {
         expect(secretWord).toBe('party')
       })
+    // call the assertion in the .then() callback
   })
 })
