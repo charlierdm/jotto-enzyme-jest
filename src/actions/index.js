@@ -1,12 +1,15 @@
 import axios from 'axios'
 
 export const actionTypes = {
-  CORRECT_GUESS: 'CORRECT_GUESS'
+  CORRECT_GUESS: 'CORRECT_GUESS',
+  GUESS_WORD: 'GUESS_WORD'
 }
 
-export function correctGuess() {
-  return {type: actionTypes.CORRECT_GUESS}
-}
+export const guessWord = (guessedWord) => {
+  return (dispatch, getState) => {
+
+  }
+} 
 
 export const getSecretWord = () => {
   // TODO: write actual action in redux/context sections
