@@ -3,7 +3,8 @@ import axios from 'axios'
 
 export const actionTypes = {
   CORRECT_GUESS: 'CORRECT_GUESS',
-  GUESS_WORD: 'GUESS_WORD'
+  GUESS_WORD: 'GUESS_WORD',
+  SET_SECRET_WORD: 'SET_SECRET_WORD'
 }
 
 export const guessWord = (guessedWord) => {
@@ -23,7 +24,13 @@ export const guessWord = (guessedWord) => {
 } 
 
 export const getSecretWord = () => {
-  // TODO: write actual action in redux/context sections
-  return axios.get('http://localhost:3030')
-    .then(response => response.data)
+  return (dispatch) => {
+    return axios.get('http://localhost:3030')
+      .then(response => {
+        dispatch({
+          type: actionTypes.SET_SECRET_WORD,
+          payload: response.data,
+        })
+      })
+  }
 } 
