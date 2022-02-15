@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(235, 224, 226);
+  background-color: rgb(170, 218, 224);
 }
 
 code {
@@ -17,7 +17,7 @@ h1, h3 {
   font-size: 3rem;
   margin: 1rem 0;
   font-weight: 600;
-  color: rgb(97, 97, 97);
+  color: rgb(134, 134, 134);
   text-decoration: underline;
 }
 
@@ -27,11 +27,23 @@ h3{
 
 input {
   padding: 0.3rem;
+  min-width: 20rem;
+  font-size: 20px;
+  border: 0px none white;
+  border-radius: 5px;
+}
+
+span {
+  font-weight: 600;
+  color: rgb(134, 134, 134);
 }
 
 button {
   margin: 0.5rem;
+  padding: 0.5rem;
   font-size: 1rem;
+  border: 0 none white;
+  border-radius: 5px;
 }
 
 .input-form {
@@ -57,10 +69,10 @@ table, th, td {
 }
 
 th {
-  background-color: rgb(148, 228, 228);
+  background-color: rgb(240 216 180);;
 }
 
-tr:nth-child(even) {background-color: #d6f5f5;}
+tr:nth-child(even) {background-color: #e2f0f0;}
 
 .congrats {
   background-color: rgb(121, 216, 184);
