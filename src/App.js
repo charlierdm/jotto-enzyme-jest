@@ -19,8 +19,6 @@ function App() {
     dispatch(getSecretWord())
   }, [])
 
-  console.log(secretWord)
-
   return (
     <div className="App" data-test='component-app'>
       <h1>Jotto</h1>
