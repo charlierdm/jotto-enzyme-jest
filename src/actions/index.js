@@ -1,8 +1,6 @@
 import {getLetterMatchCount, letterMatchCount} from '../helpers'
 import axios from 'axios'
 
-
-
 export const actionTypes = {
   CORRECT_GUESS: 'CORRECT_GUESS',
   GUESS_WORD: 'GUESS_WORD'
